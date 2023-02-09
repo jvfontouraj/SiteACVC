@@ -8,6 +8,10 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/styles/style.css">
   <link rel="stylesheet" href="/styles/query.css">
 
@@ -16,7 +20,8 @@
 <body>
   <!-- Header/Nav -->
   <header>
-    <div class="logo"></div>
+    <div class="header-div">
+    <img src="img/Logo-1.png" alt="" class="logo">
     <nav>
       <ul class="nav-list">
         <li><a href="#mestre-espiga" class="nav-link">Mestre Espiga</a>
@@ -29,20 +34,63 @@
             href="https://www.instagram.com/capoeiravemcamara/"
             target="_blank"
           >
-          <ion-icon name="logo-instagram"></ion-icon></a>
+          <ion-icon name="logo-instagram" class="instagram-logo"></ion-icon></a>
         </li>
       </ul>
     </nav>
+  </div>
   </header>
 
-  <!-- CARROSEL -->
-  <section class="carrosel"></section>
+  <!-- CARROSSEL -->
+  <section class="carrossel">
+    <img src="img/img-1.jpg" alt="">
+  </section>
 
   <!-- Mestre Espiga -->
-  <section class="mestre-espiga" id="mestre-espiga"></section>
+  <section class="mestre-espiga" id="mestre-espiga">
+    <div class="mestre-espiga-div grid grid--2-cols">
+      <img src="/img/mestre-espiga.jpg" alt="" class="mestre-pic">
+      <article class="mestre-article">
+        <h2 class="heading-secondary">Mestre Espiga</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur accusantium deserunt eveniet a pariatur in minima et aliquam, sint harum modi beatae culpa voluptas dolorem placeat autem similique obcaecati nostrum?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem deleniti maxime nam soluta quo, ratione et officia consectetur debitis unde provident quia? Dolore et dolor quaerat repellendus amet ea unde?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem deleniti maxime nam soluta quo, ratione et officia consectetur debitis unde provident quia? Dolore et dolor quaerat repellendus amet ea unde?</p>
+      </article>
+    </div>
+  </section>
 
   <!-- Turmas -->
-  <section class="turmas" id="turmas"></section>
+  <section class="turmas" id="turmas">
+    <div class="turmas-div grid grid--3-cols">
+      <div class="card">
+        <h3 class="heading-tertiary">Turma Mirim</h3>
+        <img src="img/turma-mirim.jpg" alt="">
+        <ul>
+          <li><h4>Idade:</h4><p>3 a 8 anos</p></li>
+          <li><h4>Dias:</h4><p>Terças e Quintas</p></li>
+          <li><h4>Horários:</h4><p>17h30 a 18h30</p></li>
+        </ul>
+      </div>
+      <div class="card">   
+        <h3 class="heading-tertiary">Turma Infantil</h3>
+        <img src="img/turma-infantil.jpg" alt="">     
+        <ul>
+          <li><h4>Idade:</h4><p>3 a 8 anos</p></li>
+          <li><h4>Dias:</h4><p>Terças e Quintas</p></li>
+          <li><h4>Horários:</h4><p>17h30 a 18h30</p></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="heading-tertiary">Turma Adulto</h3>
+        <img src="img/turma-adulto.jpg" alt="">
+        <ul>
+          <li><h4>Idade:</h4><p>3 a 8 anos</p></li>
+          <li><h4>Dias:</h4><p>Terças e Quintas</p></li>
+          <li><h4>Horários:</h4><p>17h30 a 18h30</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- Local -->
   <section class="local" id="local"></section>
