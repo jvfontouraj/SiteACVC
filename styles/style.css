@@ -260,6 +260,7 @@ header{
 }
 
 .local-div{
+  grid-template-columns: 2fr 1fr;
   max-width: 75vw;
   margin: auto;
   padding: 5rem 0;
@@ -268,7 +269,7 @@ header{
 .mapa{
   justify-self: center;
   align-self: center;
-  width: 50rem;
+  width: 80rem;
   height: 50rem;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.089), 0 6px 20px 0 rgba(0, 0, 0, 0.089);
