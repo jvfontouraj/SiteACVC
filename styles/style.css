@@ -113,7 +113,7 @@ header{
   width: 5vw;
   border-radius: 50%;
   box-shadow: 0 1.2rem 3.2rem #5a5a5abe;
-
+  opacity: 0.8;
 }
 
 .nav-list{
