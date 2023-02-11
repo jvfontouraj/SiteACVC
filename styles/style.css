@@ -143,13 +143,33 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8rem 0;
+  padding: 5rem 0 8rem 0;
 }
 
 .carrossel img{
+  height: 90vh;
   width: 80vw;
   opacity: 0.9;
   border-radius: 2px;
+}
+
+button{
+  height: auto;
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.arrow{
+  height: 90vh;
+  font-size: 4rem;
+  color: #555;
+  transition: all 1s;
+}
+
+.arrow:hover{
+  background-color: rgb(223, 221, 221);
+  color: #33333393;
 }
 
 /*****************/
