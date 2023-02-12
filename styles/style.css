@@ -143,14 +143,36 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0 8rem 0;
+  /* padding: 5rem 0 8rem 0; */
+
+  position: relative;
 }
 
 .carrossel img{
   height: 90vh;
   width: 80vw;
   opacity: 0.9;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  animation: fadeInOut 1s linear 1 forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.left-arrow, .right-arrow{
+  position: absolute;
+  top:0%;
+  z-index: 10;
+}
+
+.right-arrow{
+  right: 9.6%;
 }
 
 button{
@@ -163,7 +185,8 @@ button{
 .arrow{
   height: 90vh;
   font-size: 4rem;
-  color: #555;
+  color: #333;
+  background-color: #ffffff50;
   transition: all 1s;
 }
 
