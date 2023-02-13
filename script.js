@@ -68,3 +68,27 @@ function previousPicture(){
 }
 
 setTimeoutToChange();
+
+
+///////////////////////////
+////Change arrow position
+
+const pictures = document.querySelector('.pictures')
+let lastWidth = window.innerWidth;
+
+window.onload = function() {
+  let picturesHeight = pictures.offsetHeight;
+  console.log(picturesHeight);
+
+  leftArrow.style.height = picturesHeight + 'px';
+  rightArrow.style.height = picturesHeight + 'px';
+};
+
+window.addEventListener("resize", function() {
+  if (lastWidth !== window.innerWidth) {
+
+    picturesHeight = pictures.offsetHeight
+    leftArrow.style.height = picturesHeight + 'px'
+    rightArrow.style.height = picturesHeight + 'px'
+  }
+});

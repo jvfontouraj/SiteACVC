@@ -144,16 +144,13 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 5rem 0 8rem 0; */
-
   position: relative;
 }
 
 .carrossel img{
-  height: 90vh;
+  height: auto;
   width: 80vw;
   opacity: 0.9;
-  /* border-radius: 2px; */
   animation: fadeInOut 1s linear 1 forwards;
 }
 
@@ -194,6 +191,10 @@ button{
 .arrow:hover{
   background-color: rgb(223, 221, 221);
   color: #33333393;
+}
+
+.pictures{
+  height: auto;
 }
 
 /*****************/
