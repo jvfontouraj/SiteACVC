@@ -275,7 +275,7 @@ button{
   align-items: center;
   padding: 3rem;
   background-color: #bebebe33;
-  width: 15vw;
+  width: 18vw;
   border-radius: 5px;
   /* box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.096); */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.089), 0 6px 20px 0 rgba(0, 0, 0, 0.089);
@@ -315,13 +315,14 @@ button{
   max-width: 75vw;
   margin: auto;
   padding: 5rem 0;
+  column-gap: 2rem;
 }
 
 .mapa{
   justify-self: center;
   align-self: center;
-  width: 80rem;
-  height: 50rem;
+  width: 45vw;
+  height: 25vw;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.089), 0 6px 20px 0 rgba(0, 0, 0, 0.089);
 }

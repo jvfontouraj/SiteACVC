@@ -82,6 +82,9 @@ window.onload = function() {
 
   leftArrow.style.height = picturesHeight + 'px';
   rightArrow.style.height = picturesHeight + 'px';
+
+  leftArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
+  rightArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
 };
 
 window.addEventListener("resize", function() {
@@ -90,5 +93,8 @@ window.addEventListener("resize", function() {
     picturesHeight = pictures.offsetHeight
     leftArrow.style.height = picturesHeight + 'px'
     rightArrow.style.height = picturesHeight + 'px'
+    
+    leftArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
+    rightArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
   }
 });
