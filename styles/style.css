@@ -91,6 +91,11 @@ a{
   line-height: 1.2;
 }
 
+.section-div{
+  max-width: 75vw;
+  margin: auto;
+  padding: 8rem 0;}
+
 /**************/
 /* HEADER/NAV */
 /**************/
@@ -105,7 +110,6 @@ header{
   align-items: center;
   justify-content:space-between;
   padding: 1rem 0;
-  max-width: 75vw;
   margin: auto;
 }
 
@@ -205,12 +209,6 @@ button{
   background-color: #bebebe33;
 }
 
-.mestre-espiga-div{
-  max-width: 75vw;
-  margin: auto;
-  padding: 8rem 0;
-}
-
 .mestre-pic{
   width: 30vw;
   opacity: 0.9;
@@ -239,12 +237,6 @@ button{
 /**********/
 /* TURMAS */
 /**********/
-
-.turmas-div{
-  max-width: 75vw;
-  margin: auto;
-  padding: 8rem 0;
-}
 
 .turmas h2{
   display: flex;
@@ -312,9 +304,7 @@ button{
 
 .local-div{
   grid-template-columns: 2fr 1fr;
-  max-width: 75vw;
   margin: auto;
-  padding: 5rem 0;
   column-gap: 2rem;
 }
 
