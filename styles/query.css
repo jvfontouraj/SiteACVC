@@ -1,6 +1,79 @@
 /****************/
-/* BELOW 1488px*/
+/* BELOW 1120px*/
 /***************/
 
-@media (max-width: 93em) {
+@media (max-width: 70em) {
+  .section-div{
+    max-width: 85vw;
+  }
+
+  .carrossel img{
+    width: 100vw;
+  }
+
+  .right-arrow{
+    right: 0%;
+  }
+
+  .mestre-article{
+    max-width: 40vw;
+  }
+
+  .card{
+    width: 22vw;
+  }
+}
+
+/****************/
+/* BELOW 390px*/
+/***************/
+
+@media (max-width: 24em) {
+  .section-div{
+    max-width: 85vw;
+  }
+
+  .mestre-espiga-div{
+    grid-template-columns: 1fr;
+  }
+
+  .mestre-pic{
+    width: 60vw;
+    margin-bottom: 2rem;
+  }
+
+  .mestre-article{
+    max-width: 90vw;
+  }
+
+  .turmas-div{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    width: 70vw;
+    margin-bottom: 3rem;
+  }
+
+  .card img{
+    width: 50vw;
+  }
+
+  .local-div{
+    grid-template-columns: 1fr;
+  }
+
+  .mapa{
+    width: 90vw;
+    height: 50vw;
+    grid-row: 2 / 3;
+
+    margin-top: 2rem;
+  }
+
+  .footer-div{
+    grid-template-columns: 1fr;
+    align-items: center
+    ;
+  }
 }

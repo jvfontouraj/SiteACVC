@@ -94,7 +94,8 @@ a{
 .section-div{
   max-width: 75vw;
   margin: auto;
-  padding: 8rem 0;}
+  padding: 8rem 0;
+}
 
 /**************/
 /* HEADER/NAV */
@@ -160,7 +161,7 @@ header{
 
 @keyframes fadeInOut {
   0% {
-    opacity: 0.6;
+    opacity: 0.7;
   }
   100% {
     opacity: 0.9;
@@ -217,7 +218,7 @@ button{
 }
 
 .mestre-article{
-  max-width: 25vw;
+  max-width: 30vw;
   background-color: whitesmoke;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.089);
   padding: 2rem;
