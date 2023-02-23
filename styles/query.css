@@ -76,4 +76,8 @@
     align-items: center
     ;
   }
+
+  .contato, .social{
+    align-items: center;
+  }
 }
