@@ -1,3 +1,5 @@
+"use strict";
+
 const leftArrow = document.querySelector('.left-arrow')
 const rightArrow = document.querySelector('.right-arrow')
 const contador = document.querySelector('.contador')
@@ -6,6 +8,7 @@ let i = 0
 
 let pastImg 
 let nextImg
+let timeoutId
 
 leftArrow.addEventListener("click", () => {
   clearTimeout(timeoutId)
@@ -78,7 +81,6 @@ let lastWidth = window.innerWidth;
 
 window.onload = function() {
   let picturesHeight = pictures.offsetHeight;
-  console.log(picturesHeight);
 
   leftArrow.style.height = picturesHeight + 'px';
   rightArrow.style.height = picturesHeight + 'px';
@@ -90,7 +92,7 @@ window.onload = function() {
 window.addEventListener("resize", function() {
   if (lastWidth !== window.innerWidth) {
 
-    picturesHeight = pictures.offsetHeight
+    let picturesHeight = pictures.offsetHeight
     leftArrow.style.height = picturesHeight + 'px'
     rightArrow.style.height = picturesHeight + 'px'
     
@@ -98,3 +100,79 @@ window.addEventListener("resize", function() {
     rightArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
   }
 });
+
+
+/////////////////////////////
+//MOBILE NAVIGATION
+
+const btnNavEl = document.querySelector(".btn-menu");
+const headerEl = document.querySelector(".header");
+const picturesEl = document.querySelector(".pictures")
+const mestrePicEl = document.querySelector(".mestre-pic")
+const btnNavLink = document.querySelector(".nav-link")
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+  picturesEl.classList.toggle("go-back")
+  mestrePicEl.classList.toggle("go-back")
+});
+
+
+/////////////////////////////
+// Smooth scrolling animation
+
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    // e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close mobile navigation
+    if (link.classList.contains("nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
+
+/////////////////////////////
+// STICKY NAVIGATION
+
+const carrossel = document.querySelector(".carrossel");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(carrossel);
+
+
