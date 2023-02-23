@@ -29,6 +29,10 @@
 /***************/
 
 @media (max-width: 24em) {
+  html {
+    font-size: 50%;
+  }
+
   .section-div{
     max-width: 85vw;
   }
@@ -59,25 +63,41 @@
     width: 50vw;
   }
 
+  .turmas-div h4{
+    font-size: 2.4rem;
+  }
+
+  .turmas-div p{
+    font-size: 2rem;
+  }
+
   .local-div{
     grid-template-columns: 1fr;
   }
 
   .mapa{
-    width: 90vw;
+    width: 85vw;
     height: 50vw;
     grid-row: 2 / 3;
 
-    margin-top: 2rem;
+    margin-top: 3rem;
+  }
+
+  .endereço h3{
+    margin-bottom: 1.6rem;
   }
 
   .footer-div{
     grid-template-columns: 1fr;
-    align-items: center
-    ;
+    align-items: center;
+    padding: 6rem 0 5rem 0;  
   }
 
   .contato, .social{
     align-items: center;
+  }
+  
+  .footer-div a{
+    padding-bottom: 1rem;
   }
 }
