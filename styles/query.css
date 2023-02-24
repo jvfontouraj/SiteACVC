@@ -41,6 +41,7 @@
     width: 10vw;
   }
 
+  /* MOBILE NAVIGATION */
   .btn-menu {
     display: block;
     z-index: 9999;
