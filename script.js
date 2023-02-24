@@ -74,30 +74,28 @@ setTimeoutToChange();
 
 
 ///////////////////////////
-////Change arrow position
+////Change arrow position and size
 
 const pictures = document.querySelector('.pictures')
 let lastWidth = window.innerWidth;
 
-window.onload = function() {
-  let picturesHeight = pictures.offsetHeight;
-
+function changeArrow(picturesHeight){
   leftArrow.style.height = picturesHeight + 'px';
   rightArrow.style.height = picturesHeight + 'px';
 
-  leftArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
-  rightArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
+  leftArrow.style.fontSize = `${picturesHeight/10 + 'px'}`
+  rightArrow.style.fontSize = `${picturesHeight/10 + 'px'}`
+}
+
+window.onload = function() {
+  let picturesHeight = pictures.offsetHeight;
+  changeArrow(picturesHeight)
 };
 
 window.addEventListener("resize", function() {
   if (lastWidth !== window.innerWidth) {
-
     let picturesHeight = pictures.offsetHeight
-    leftArrow.style.height = picturesHeight + 'px'
-    rightArrow.style.height = picturesHeight + 'px'
-    
-    leftArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
-    rightArrow.style.fontSize = `${picturesHeight/20 + 'px'}`
+    changeArrow(picturesHeight)
   }
 });
 
@@ -107,13 +105,13 @@ window.addEventListener("resize", function() {
 
 const btnNavEl = document.querySelector(".btn-menu");
 const headerEl = document.querySelector(".header");
-const picturesEl = document.querySelector(".pictures")
+const imgEl = document.querySelector("IMG")
 const mestrePicEl = document.querySelector(".mestre-pic")
-const btnNavLink = document.querySelector(".nav-link")
+const sectionEl = document.querySelector("SECTION")
 
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
-  picturesEl.classList.toggle("go-back")
+  sectionEl.classList.toggle("go-back")
   mestrePicEl.classList.toggle("go-back")
 });
 
