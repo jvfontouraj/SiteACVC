@@ -96,7 +96,7 @@
     color: #555;
   }
 
-  .nav-icon{
+  .nav-icon, .sticky .nav-icon{
     font-size: 3.4rem;
     color: #555;
   }
