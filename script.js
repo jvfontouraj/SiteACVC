@@ -79,26 +79,40 @@ setTimeoutToChange();
 const pictures = document.querySelector('.pictures')
 let lastWidth = window.innerWidth;
 
-function changeArrow(picturesHeight){
+function changeArrow(picturesHeight, divisor){
   leftArrow.style.height = picturesHeight + 'px';
   rightArrow.style.height = picturesHeight + 'px';
 
-  leftArrow.style.fontSize = `${picturesHeight/10 + 'px'}`
-  rightArrow.style.fontSize = `${picturesHeight/10 + 'px'}`
+  leftArrow.style.fontSize = `${picturesHeight/divisor + 'px'}`
+  rightArrow.style.fontSize = `${picturesHeight/divisor + 'px'}`
 }
 
-window.onload = function() {
-  let picturesHeight = pictures.offsetHeight;
-  changeArrow(picturesHeight)
-};
-
-window.addEventListener("resize", function() {
-  if (lastWidth !== window.innerWidth) {
-    let picturesHeight = pictures.offsetHeight
-    changeArrow(picturesHeight)
-  }
-});
-
+if(lastWidth < 900){
+  window.onload = function() {
+    let picturesHeight = pictures.offsetHeight;
+    changeArrow(picturesHeight, 10)
+  };
+  
+  window.addEventListener("resize", function() {
+    if (lastWidth !== window.innerWidth) {
+      let picturesHeight = pictures.offsetHeight
+      changeArrow(picturesHeight, 10)
+    }
+  });
+}else{
+  window.onload = function() {
+    let picturesHeight = pictures.offsetHeight;
+    changeArrow(picturesHeight, 15)
+  };
+  
+  window.addEventListener("resize", function() {
+    if (lastWidth !== window.innerWidth) {
+      let picturesHeight = pictures.offsetHeight
+      changeArrow(picturesHeight, 15)
+    }
+  });
+}
+  
 
 /////////////////////////////
 //MOBILE NAVIGATION
