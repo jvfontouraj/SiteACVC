@@ -25,10 +25,10 @@
 }
 
 /****************/
-/* BELOW 390px*/
+/* BELOW 480px*/
 /***************/
 
-@media (max-width: 24em) {
+@media (max-width: 30em) {
   html {
     font-size: 50%;
   }
